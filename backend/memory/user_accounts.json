@@ -1,0 +1,206 @@
+{
+    "users": {
+        "harshita@example.com": {
+            "name": "Harshita Sadhwani",
+            "email": "harshita@example.com",
+            "questions": [
+                {
+                    "query": "K-Means Clustering",
+                    "agent": "researcher",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Erd\u0151s-R\u00e9nyi Graph Model",
+                    "agent": "researcher",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Erd\u0151s-R\u00e9nyi Graph Model",
+                    "agent": "researcher",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Agentic AI Systems",
+                    "agent": "researcher",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Practice Quiz: Agentic AI Systems",
+                    "agent": "evaluator",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Question 1: What is the primary function of the core architectural component known as the Planner in Agentic AI systems?\nStudent Written Answer: idk pls help\n\nQuestion 2: Which of the following frameworks is described as a compact software development kit (SDK) from Microsoft designed for enterprise-level Agentic AI applications?\nStudent Written Answer: idk pls help\n\nQuestion 3: How is Agentic AI utilized within the healthcare sector according to the provided text?\nStudent Written Answer: idk pls help\n\nQuestion 4: According to Radanliev et al. (2024), which three essential techniques are highlighted for protecting privacy in AI systems?\nStudent Written Answer: idk pls help\n\nQuestion 5: What fundamental loop distinguishes agentic architectures from traditional scripted automation?\nStudent Written Answer: idk pls help",
+                    "agent": "evaluator",
+                    "mode": "general"
+                },
+                {
+                    "query": "Practice Quiz: Typed Answer practice on Agentic AI Systems",
+                    "agent": "evaluator",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Practice Quiz: Agentic AI Systems",
+                    "agent": "evaluator",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Practice Quiz: Typed Answer practice on Agentic AI Systems",
+                    "agent": "evaluator",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Practice Quiz: Agentic AI Systems",
+                    "agent": "evaluator",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Practice Quiz: Supervised Learning Basics",
+                    "agent": "evaluator",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Practice Quiz: Agentic AI Systems",
+                    "agent": "evaluator",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Practice Quiz: Agentic AI Systems",
+                    "agent": "evaluator",
+                    "mode": "practice"
+                }
+            ]
+        },
+        "harshivedu@gmail.com": {
+            "name": "Harshita Sadhwani",
+            "email": "harshivedu@gmail.com",
+            "questions": [
+                {
+                    "query": "Based strictly on document 'ML_Textbook.pdf', create 3 Multiple Choice Questions (MCQ) on topic: Machine Learning Basics. For each question, provide 4 options labeled A, B, C, and D.",
+                    "agent": "evaluator",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Question 1: According to the document 'ML_Textbook.pdf', which of the following best defines Machine Learning in its simplest terms?\nStudent Written Answer: A: A method for computers to follow hard-coded instructions without human intervention.\n\nQuestion 2: Which of the following scenarios best demonstrates the core workflow of Supervised Learning as described in 'ML_Textbook.pdf'? After selecting your answer, please explain in your own words why this scenario fits the definition.\nStudent Written Answer: B: Training an algorithm on a dataset of house features paired with their actual market prices to predict future prices.\n\nQuestion 3: You are working on a practical machine learning project using the guidelines from 'ML_Textbook.pdf'. You have gathered your dataset, but before training your model, you need to split your data. What is the standard and recommended practice for splitting your dataset according to the textbook?\nStudent Written Answer: B: Split the data into a training set to build the model and a separate test set to evaluate its performance on unseen data.",
+                    "agent": "evaluator",
+                    "mode": "general"
+                },
+                {
+                    "query": "Explain Introduction to Machine Learning Definitions in detail",
+                    "agent": "tutor",
+                    "mode": "tutor"
+                },
+                {
+                    "query": "Based strictly on document 'A_Comprehensive_Study_of_Agentic_AI_Systems.pdf', create 3 Multiple Choice Questions (MCQ) on topic: Agentic AI. For each question, provide 4 options labeled A, B, C, and D.",
+                    "agent": "researcher",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Practice Quiz: Agentic AI Systems",
+                    "agent": "evaluator",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Practice Quiz: Written answer practice on Agentic AI Systems",
+                    "agent": "evaluator",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Practice Quiz: Based strictly on document 'A_Comprehensive_Study_of_Agentic_AI_Systems.pdf', create 3 Multiple Choice Questions (MCQ) on topic: Machine Learning Basics. For each question, provide 4 options labeled A, B, C, and D.",
+                    "agent": "evaluator",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Question 1: Which core architectural component of Agentic AI is responsible for breaking down high-level objectives into specific executable sub-tasks?\nStudent Written Answer: A: Planner\n\nQuestion 2: According to Radanliev et al. (2024), the protection of privacy in AI systems depends on which three essential techniques?\nStudent Written Answer: B: Supervised learning, reinforcement learning, and neural networks\n\nQuestion 3: In AI agentic workflows, what is the primary function of the perception stage?\nStudent Written Answer: A: Acquiring data through sensors and cameras to understand the environment and identify tasks",
+                    "agent": "evaluator",
+                    "mode": "general"
+                },
+                {
+                    "query": "Practice Quiz: Based strictly on document 'A_Comprehensive_Study_of_Agentic_AI_Systems.pdf', create 3 Multiple Choice Questions (MCQ) on topic: Machine Learning Basics. For each question, provide 4 options labeled A, B, C, and D.",
+                    "agent": "evaluator",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Practice Quiz: Based strictly on document 'A_Comprehensive_Study_of_Agentic_AI_Systems.pdf', create 3 Multiple Choice Questions (MCQ) on topic: Machine Learning Basics. For each question, provide 4 options labeled A, B, C, and D.",
+                    "agent": "evaluator",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Practice Quiz: Based strictly on document 'A_Comprehensive_Study_of_Agentic_AI_Systems.pdf', create 3 Multiple Choice Questions (MCQ) on topic: Machine Learning Basics. For each question, provide 4 options labeled A, B, C, and D.",
+                    "agent": "evaluator",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Question 1: Which core architectural component of Agentic AI is responsible for breaking down high-level objectives into specific executable sub-tasks?\nStudent Written Answer: B: Planner\n\nQuestion 2: According to Radanliev et al. (2024), the protection of privacy in AI systems depends on which three essential techniques?\nStudent Written Answer: A: Differential privacy, homomorphic encryption, and federated learning\n\nQuestion 3: Which stage of AI agentic workflows involves acquiring data through sensors and cameras to understand the environment and identify tasks?\nStudent Written Answer: A: Decision-Making",
+                    "agent": "evaluator",
+                    "mode": "general"
+                },
+                {
+                    "query": "Question 1: Which core architectural component of Agentic AI is responsible for breaking down high-level objectives into specific executable sub-tasks?\nStudent Written Answer: B: Planner\n\nQuestion 2: According to Radanliev et al. (2024), the protection of privacy in AI systems depends on which three essential techniques?\nStudent Written Answer: A: Differential privacy, homomorphic encryption, and federated learning\n\nQuestion 3: Which stage of AI agentic workflows involves acquiring data through sensors and cameras to understand the environment and identify tasks?\nStudent Written Answer: A: Decision-Making",
+                    "agent": "evaluator",
+                    "mode": "general"
+                },
+                {
+                    "query": "Question 1: Which core architectural component of Agentic AI is responsible for breaking down high-level objectives into specific executable sub-tasks?\nStudent Written Answer: B: Planner\n\nQuestion 2: According to Radanliev et al. (2024), the protection of privacy in AI systems depends on which three essential techniques?\nStudent Written Answer: A: Differential privacy, homomorphic encryption, and federated learning\n\nQuestion 3: Which stage of AI agentic workflows involves acquiring data through sensors and cameras to understand the environment and identify tasks?\nStudent Written Answer: A: Decision-Making",
+                    "agent": "evaluator",
+                    "mode": "general"
+                },
+                {
+                    "query": "Question 1: Which core architectural component of Agentic AI is responsible for breaking down high-level objectives into specific executable sub-tasks?\nStudent Written Answer: B: Planner\n\nQuestion 2: According to Radanliev et al. (2024), the protection of privacy in AI systems depends on which three essential techniques?\nStudent Written Answer: A: Differential privacy, homomorphic encryption, and federated learning\n\nQuestion 3: Which stage of AI agentic workflows involves acquiring data through sensors and cameras to understand the environment and identify tasks?\nStudent Written Answer: idk pls help",
+                    "agent": "evaluator",
+                    "mode": "general"
+                },
+                {
+                    "query": "Practice Quiz: Based strictly on document 'A_Comprehensive_Study_of_Agentic_AI_Systems.pdf', create 5 Written Answer conceptual questions on topic: Machine Learning Basics. Do not provide multiple choice options.",
+                    "agent": "evaluator",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Question 1: Explain how reinforcement learning algorithms and neural networks contribute to the decision-making process within AI agentic workflows according to the document.\nStudent Written Answer: idk this answer\n\nQuestion 2: Describe the role of supervised and reinforcement learning techniques in the feedback and learning component of AI agentic workflows.\nStudent Written Answer: idk this answer\n\nQuestion 3: Explain how machine learning technology is utilized to analyze large financial datasets and detect tax non-compliance or fraud as discussed in the context.\nStudent Written Answer: idk this answer\n\nQuestion 4: Discuss how machine learning basics underpin the reasoning engine and cognitive components in the architecture and frameworks of Agentic AI systems.\nStudent Written Answer: idk this answer\n\nQuestion 5: Explain the role of machine learning and predictive analytics in optimizing supply chain management and logistics as outlined in the text.\nStudent Written Answer: idk",
+                    "agent": "evaluator",
+                    "mode": "general"
+                },
+                {
+                    "query": "Practice Quiz: Based strictly on document 'A_Comprehensive_Study_of_Agentic_AI_Systems.pdf', create 5 Multiple Choice Questions (MCQ) on topic: Machine Learning Basics. For each question, provide 4 options labeled A, B, C, and D.",
+                    "agent": "evaluator",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Practice Quiz: Based strictly on document 'A_Comprehensive_Study_of_Agentic_AI_Systems.pdf', create 5 Multiple Choice Questions (MCQ) on topic: Machine Learning Basics. For each question, provide 4 options labeled A, B, C, and D.",
+                    "agent": "evaluator",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Practice Quiz: Based strictly on document 'ML_Textbook.pdf', create 5 Multiple Choice Questions (MCQ) on topic: Machine Learning Basics. For each question, provide 4 options labeled A, B, C, and D.",
+                    "agent": "evaluator",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Practice Quiz: Based strictly on document 'ML_Textbook.pdf', create 5 Multiple Choice Questions (MCQ) on topic: Machine Learning Basics. For each question, provide 4 options labeled A, B, C, and D.",
+                    "agent": "evaluator",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Practice Quiz: Based strictly on document 'A_Comprehensive_Study_of_Agentic_AI_Systems.pdf', create 5 Multiple Choice Questions (MCQ) on topic: Machine Learning Basics. For each question, provide 4 options labeled A, B, C, and D.",
+                    "agent": "evaluator",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Practice Quiz: Based strictly on document 'A_Comprehensive_Study_of_Agentic_AI_Systems.pdf', create 5 Multiple Choice Questions (MCQ) on topic: Machine Learning Basics. For each question, provide 4 options labeled A, B, C, and D.",
+                    "agent": "evaluator",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Practice Quiz: Based strictly on document 'A_Comprehensive_Study_of_Agentic_AI_Systems.pdf', create 5 Multiple Choice Questions (MCQ) on topic: Machine Learning Basics. For each question, provide 4 options labeled A, B, C, and D.",
+                    "agent": "evaluator",
+                    "mode": "practice"
+                },
+                {
+                    "query": "Practice Quiz: Based strictly on document 'A_Comprehensive_Study_of_Agentic_AI_Systems.pdf', create 5 Multiple Choice Questions (MCQ) on topic: Machine Learning Basics. For each question, provide 4 options labeled A, B, C, and D.",
+                    "agent": "evaluator",
+                    "mode": "practice"
+                }
+            ]
+        }
+    }
+}

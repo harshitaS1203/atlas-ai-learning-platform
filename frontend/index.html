@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATLAS - AI Learning Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Fullscreen Welcome / Login Landing Page -->
+    <div class="welcome-screen" id="welcomeScreen">
+        <div class="welcome-glow-bg"></div>
+        <div class="welcome-card">
+            <div class="welcome-brand">
+                <img src="logo.png" alt="ATLAS Logo" class="welcome-logo">
+                <span class="welcome-brand-title">ATLAS</span>
+            </div>
+            
+            <div class="welcome-header">
+                <h1>Hi, welcome to ATLAS</h1>
+                <p>Get started by creating your account to track your study sessions and documents.</p>
+            </div>
+
+            <form id="welcomeLoginForm" class="welcome-form">
+                <div class="form-group">
+                    <label class="input-label" for="welcomeNameInput">Full Name</label>
+                    <input type="text" id="welcomeNameInput" class="text-input" placeholder="e.g. Harshita Sadhwani" required autocomplete="name">
+                </div>
+
+                <div class="form-group" style="margin-top: 14px;">
+                    <label class="input-label" for="welcomeEmailInput">Email Address</label>
+                    <input type="email" id="welcomeEmailInput" class="text-input" placeholder="e.g. harshita@example.com" required autocomplete="email">
+                </div>
+
+                <button type="submit" class="btn btn-primary welcome-submit-btn">Get Started &rarr;</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Workspace Application -->
+    <div class="app-container" id="appContainer" style="display: none;">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="brand">
+                <div class="brand-row">
+                    <div class="brand-logo-title">
+                        <img src="logo.png" alt="ATLAS Logo" class="brand-logo-img">
+                        <div class="brand-text-col">
+                            <span class="brand-title">ATLAS</span>
+                            <span class="brand-subtitle">AI Learning Platform</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="nav-section">
+                <div class="nav-label">WORKSPACE</div>
+                <button class="nav-item active" data-view="dashboard">
+                    <span class="nav-text">Dashboard</span>
+                </button>
+                <button class="nav-item" data-view="learn">
+                    <span class="nav-text">Learn</span>
+                    <span class="nav-pill" id="learnPdfCountBadge">PDF</span>
+                </button>
+                <button class="nav-item" data-view="practice">
+                    <span class="nav-text">Practice</span>
+                </button>
+                <button class="nav-item" data-view="my-documents">
+                    <span class="nav-text">Documents</span>
+                </button>
+
+                <div class="nav-label">ACCOUNT</div>
+                <button class="nav-item" data-view="user-history">
+                    <span class="nav-text">Question History</span>
+                </button>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <button class="sidebar-btn" id="openSettingsBtn">Settings</button>
+
+                <!-- User Profile Card -->
+                <div class="user-profile-card" id="sidebarUserProfileBtn">
+                    <div class="user-avatar" id="sidebarAvatar">H</div>
+                    <div class="user-details">
+                        <div class="user-name" id="sidebarUserName">Harshita</div>
+                        <div class="user-sub" id="sidebarUserEmail">harshita@example.com</div>
+                    </div>
+                    <span class="user-switch-icon" title="Switch Account">&hookleftarrow;</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Global Clean Top Bar (Search Bar Removed) -->
+            <header class="top-bar">
+                <div class="top-left-breadcrumb">
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
+                        <span class="toggle-bar"></span>
+                        <span class="toggle-bar"></span>
+                        <span class="toggle-bar"></span>
+                    </button>
+                    <span class="breadcrumb-item">Atlas</span>
+                    <span class="breadcrumb-slash">/</span>
+                    <span class="breadcrumb-current">Workspace</span>
+                    <span class="badge badge-accent" id="topDocsCountBadge">0 documents synced</span>
+                </div>
+
+                <div class="top-right-tools"></div>
+            </header>
+
+            <!-- Dashboard View -->
+            <section class="view-section active" id="view-dashboard">
+                <div class="header-banner">
+                    <div class="header-top-row">
+                        <h1 id="greetingHeading">Good evening</h1>
+                        <div class="user-welcome-badge">Logged in as <strong id="dashUsernameBadge">Harshita</strong></div>
+                    </div>
+                    <p class="header-subtitle">Ready to learn with your AI study platform?</p>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">Study Sessions</div>
+                        <div class="stat-value" id="statStudySessions">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Questions Asked</div>
+                        <div class="stat-value" id="statQuestionsAsked">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Documents Synced</div>
+                        <div class="stat-value" id="statDocuments">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Topics Learned</div>
+                        <div class="stat-value" id="statTopicsLearned">0</div>
+                    </div>
+                </div>
+
+                <!-- Continue Learning -->
+                <div class="section-container">
+                    <h2 class="section-title">CONTINUE LEARNING</h2>
+                    <div class="continue-card" id="continueLearningCard">
+                        <div class="continue-content">
+                            <h3 class="continue-topic" id="continueTopicName">No recent topics</h3>
+                            <p class="continue-desc" id="continueTopicDesc">Start a new learning session in Learn or Practice.</p>
+                        </div>
+                        <button class="btn btn-primary" id="continueResumeBtn">Resume Learn</button>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="section-container">
+                    <h2 class="section-title">QUICK ACTIONS</h2>
+                    <div class="quick-actions-grid">
+                        <div class="action-card" data-action="learn">
+                            <h3 class="action-title">Learn</h3>
+                            <p class="action-desc">Understand concepts step-by-step with integrated PDF document upload.</p>
+                            <span class="action-link">Open Learn &rarr;</span>
+                        </div>
+                        <div class="action-card" data-action="practice">
+                            <h3 class="action-title">Practice</h3>
+                            <p class="action-desc">Adaptive Evaluator engine with scoring metrics & diagnostic breakdown.</p>
+                            <span class="action-link">Open Practice &rarr;</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learn View (Standard AI Chat Interface with Synced PDFs) -->
+            <section class="view-section" id="view-learn">
+                <div class="page-header" style="margin-bottom: 12px;">
+                    <div class="page-title-row">
+                        <h1>Learn</h1>
+                        <span class="badge badge-primary">Backend Synced</span>
+                    </div>
+                    <p class="page-subtitle">Understand concepts and chat directly with your study PDFs.</p>
+                </div>
+
+                <!-- Sequential AI Chat Interface Container -->
+                <div class="chatbot-container">
+                    <div class="chat-stream-area" id="learnChatStream">
+                        <div class="chat-welcome-box">
+                            <img src="logo.png" alt="ATLAS" class="chat-welcome-logo">
+                            <div class="chat-welcome-title">How can Atlas help you learn today?</div>
+                            <div class="chat-welcome-sub">Ask a question or upload study PDFs below to get started.</div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Sticky Chat Input Bar -->
+                    <div class="chat-input-sticky-bar">
+                        <!-- Active Single Attached PDF for Prompt -->
+                        <div class="synced-docs-chips" id="learnSyncedChips"></div>
+                        <div class="status-toast" id="learnUploadToast"></div>
+
+                        <div class="chat-form-row">
+                            <input type="file" id="learnPdfFileInput" accept="application/pdf" style="display: none;">
+                            <button class="btn btn-secondary attach-btn" id="learnBrowsePdfBtn" title="Attach Single PDF Document">📎 Attach PDF</button>
+                            <input type="text" id="learnInput" class="chat-text-field" placeholder="Ask Atlas anything or query attached PDF..." autocomplete="off">
+                            <button class="btn btn-primary send-chat-btn" id="learnSubmitBtn">Send &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PRACTICE View (MCQ & Written Modes + PDF Selection + Comprehensive Diagnostic) -->
+            <section class="view-section" id="view-practice">
+                <div class="practice-top-row">
+                    <div>
+                        <h1 class="page-main-title">Practice</h1>
+                        <p class="page-subtitle">Test your understanding with AI Evaluator quizzes & written checks.</p>
+                    </div>
+                </div>
+
+                <div class="practice-control-bar">
+                    <div class="control-box flex-2">
+                        <div class="control-label">DOCUMENT CONTEXT (PDF)</div>
+                        <select id="practicePdfSelect" class="pdf-select-dropdown" style="width: 100%; max-width: 100%;">
+                            <option value="none">-- General Topic (No PDF) --</option>
+                        </select>
+                    </div>
+                    
+                    <div class="control-box flex-2">
+                        <div class="control-label">TARGET TOPIC</div>
+                        <div class="topic-input-row">
+                            <input type="text" id="practiceTopicInput" class="practice-topic-field" placeholder="Enter topic, e.g. Machine Learning, Network Graphs..." value="Machine Learning Basics">
+                        </div>
+                    </div>
+                    
+                    <div class="control-box flex-2">
+                        <div class="control-label">QUESTION MODE</div>
+                        <div class="mode-pill-group">
+                            <button class="mode-pill active" data-mode="mcq">MCQ Mode</button>
+                            <button class="mode-pill" data-mode="typed">Typed Answer</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-card" style="margin-top: 14px;">
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <input type="text" id="practicePromptInput" class="text-input" placeholder="Customize quiz focus or press Start Practice..." autocomplete="off">
+                    </div>
+                    <button class="btn btn-primary" id="startQuizBtn" style="white-space: nowrap;">Start Practice &rarr;</button>
+                </div>
+
+                <div class="practice-split-container" id="practiceSplitContainer">
+                    <!-- Left Column: Quiz Questions -->
+                    <div class="quiz-engine-left">
+                        <div class="quiz-question-box" id="quizQuestionBox">
+                            <div class="quiz-box-top-row">
+                                <div class="q-progress-info">
+                                    <span class="q-number" id="qNumberLabel">Question 1 of 5</span>
+                                    <span class="badge badge-accent" id="qModeBadge">MCQ MODE</span>
+                                </div>
+                            </div>
+                            
+                            <div class="q-progress-bar-track">
+                                <div class="q-progress-bar-fill" id="qProgressBarFill" style="width: 20%;"></div>
+                            </div>
+
+                            <!-- Question Prompt Text -->
+                            <div class="q-prompt-text" id="qPromptText">
+                                Click "Start Practice" above to generate an adaptive quiz using the Atlas Evaluator agent.
+                            </div>
+
+                            <!-- MCQ Option Cards Container -->
+                            <div class="q-options-list" id="qOptionsList"></div>
+
+                            <!-- Written/Typed Answer Input Container -->
+                            <div class="q-written-container" id="qWrittenContainer" style="display: none; margin-bottom: 24px;">
+                                <label class="input-label" for="qWrittenInput" style="margin-bottom: 8px; display: block;">Your Typed Answer:</label>
+                                <textarea id="qWrittenInput" class="written-answer-textarea" rows="4" placeholder="Type your answer here in detail..."></textarea>
+                            </div>
+
+                            <div class="quiz-box-footer">
+                                <button class="btn btn-secondary" id="qPrevBtn" disabled>&larr; Previous</button>
+                                <button class="btn btn-primary" id="qNextBtn">Next Question &rarr;</button>
+                            </div>
+
+                            <div class="source-corpus-mapping" id="sourceCorpusMapping">
+                                <div class="source-mapping-left">
+                                    <span class="mapping-icon">📄</span>
+                                    <div>
+                                        <div class="mapping-title">DOCUMENT CONTEXT</div>
+                                        <div class="mapping-desc" id="mappingDescText">No PDF attached</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Evaluation Diagnostics -->
+                    <div class="quiz-diagnostic-right">
+                        <div class="diagnostic-box">
+                            <div class="diagnostic-header">
+                                <div class="diagnostic-title">EVALUATION DIAGNOSTIC</div>
+                                <div class="diagnostic-main-heading">Your Performance</div>
+                            </div>
+
+                            <div class="score-display-card">
+                                <div class="score-ring-wrap">
+                                    <svg class="score-ring-svg" viewBox="0 0 36 36">
+                                        <path class="ring-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <path class="ring-fill" id="scoreRingFill" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    </svg>
+                                    <div class="score-number-text" id="scorePctText">0%</div>
+                                </div>
+                                <div class="score-info-col">
+                                    <div class="score-fraction" id="scoreFractionText">0 / 10</div>
+                                    <div class="score-status-badge" id="scoreStatusBadge">PENDING EVALUATION</div>
+                                    <div class="score-sub-detail" id="scoreSubDetailText">Complete evaluation to see diagnostic</div>
+                                </div>
+                            </div>
+
+                            <!-- Strengths -->
+                            <div class="diag-section" id="practiceStrengthsSection">
+                                <div class="diag-section-header green">
+                                    <span>STRENGTHS (CONCEPTS MASTERED)</span>
+                                </div>
+                                <div class="diag-list" id="practiceStrengthsList">
+                                    <div class="diag-placeholder">Complete quiz to view strengths.</div>
+                                </div>
+                            </div>
+
+                            <!-- Weaknesses -->
+                            <div class="diag-section" id="practiceWeaknessesSection">
+                                <div class="diag-section-header red">
+                                    <span>WEAKNESSES (CONCEPTS TO REVIEW)</span>
+                                </div>
+                                <div class="diag-list" id="practiceWeaknessesList">
+                                    <div class="diag-placeholder">Complete quiz to view weaknesses.</div>
+                                </div>
+                            </div>
+
+                            <!-- Recommended Topic to Focus On -->
+                            <div class="diag-section" id="practiceRecommendationSection">
+                                <div class="diag-section-header blue">
+                                    <span>TOPIC TO FOCUS ON</span>
+                                </div>
+                                <div class="recommendation-card" id="practiceRecommendationCard">
+                                    <div class="recommendation-title" id="practiceRecTopicText">No focus topic yet</div>
+                                    <button class="btn btn-secondary btn-sm" id="practiceFocusLearnBtn" style="margin-top: 8px; width: 100%;">Study This Topic in Learn &rarr;</button>
+                                </div>
+                            </div>
+
+                            <!-- Detailed AI Evaluation -->
+                            <div class="diag-section" id="practiceDetailedEvalSection">
+                                <div class="diag-section-header">
+                                    <span>DETAILED EVALUATION</span>
+                                </div>
+                                <div class="detailed-eval-box" id="practiceDetailedEvalText">
+                                    Evaluation results and AI feedback will appear here.
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary" id="practiceAgainBtn" style="width: 100%; margin-top: 8px;">&circlearrowright; Practice Again</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- My Documents View -->
+            <section class="view-section" id="view-my-documents">
+                <div class="page-header">
+                    <div class="page-title-row">
+                        <h1>My Documents</h1>
+                        <span class="badge badge-primary">Backend Knowledge Base</span>
+                    </div>
+                    <p class="page-subtitle">Manage study files connected to Atlas backend.</p>
+                </div>
+
+                <div class="documents-upload-bar">
+                    <input type="file" id="myDocsFileInput" accept="application/pdf" multiple style="display: none;">
+                    <button class="btn btn-primary" id="addDocumentBtn">+ Upload / Add Document</button>
+                    <span class="docs-upload-sub">Only PDF files are supported. Files immediately index into Atlas graph.</span>
+                </div>
+                <div class="status-toast" id="myDocsToast"></div>
+
+                <div class="documents-list-container" id="myDocsList"></div>
+            </section>
+
+            <!-- Question History / Account View -->
+            <section class="view-section" id="view-user-history">
+                <div class="page-header">
+                    <div class="page-title-row">
+                        <h1>Question History</h1>
+                        <span class="badge badge-accent" id="userHistoryBadge">Account Log</span>
+                    </div>
+                    <p class="page-subtitle">View questions tracked for your user account.</p>
+                </div>
+
+                <div class="history-list-container" id="userHistoryList"></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="modal-overlay" id="settingsModal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h2>Settings</h2>
+                <button class="modal-close" id="closeSettingsBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <div class="setting-title">Backend Architecture</div>
+                        <div class="setting-desc">Connected to backend.agents.graph (AtlasGraph)</div>
+                    </div>
+                    <span class="badge badge-success" id="backendStatusBadge">Connected</span>
+                </div>
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <div class="setting-title">Knowledge Base Storage</div>
+                        <div class="setting-desc">backend/user_documents/</div>
+                    </div>
+                </div>
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <div class="setting-title">Active Account</div>
+                        <div class="setting-desc" id="settingsUsername">Harshita</div>
+                    </div>
+                    <button class="btn btn-secondary" id="settingsSignOutBtn" style="padding: 6px 12px; font-size: 12px;">Sign Out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
