@@ -34,12 +34,12 @@ Atlas operates on a multi-agent state graph built with **LangGraph**:
 
 ```mermaid
 graph TD
-    User([User Request]) --> Supervisor[Supervisor Agent]
-    Supervisor -->|General / Conceptual| Tutor[Tutor Agent]
-    Supervisor -->|PDF Query / Document RAG| Researcher[Researcher Agent (FAISS RAG)]
-    Supervisor -->|Quiz Request / Practice Mode| Evaluator[Evaluator Agent]
-    Evaluator -->|Submit Answers| Memory[Memory Node]
-    Researcher --> Response([Output Response])
+    User(["User Request"]) --> Supervisor["Supervisor Agent"]
+    Supervisor -->|General / Conceptual| Tutor["Tutor Agent"]
+    Supervisor -->|PDF Query / Document RAG| Researcher["Researcher Agent (FAISS RAG)"]
+    Supervisor -->|Quiz Request / Practice Mode| Evaluator["Evaluator Agent"]
+    Evaluator -->|Submit Answers| Memory["Memory Node"]
+    Researcher --> Response(["Output Response"])
     Tutor --> Response
     Evaluator --> Response
     Memory --> Response
