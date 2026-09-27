@@ -118,3 +118,4 @@ atlas/
 | `POST /api/documents/delete` | `POST` | Deletes PDF file and updates RAG index |
 | `POST /api/chat` | `POST` | Processes chat queries or practice quiz requests via Atlas agents |
 | `GET /api/user/history` | `GET` | Returns user question history |
+# atlas-ai-learning-platform
